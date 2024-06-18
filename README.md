@@ -1,1 +1,1 @@
-command $help will show you all available commands
+command $info will show you all available commands
