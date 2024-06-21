@@ -22,8 +22,15 @@ async def bot_info(ctx):
 @bot.command()
 async def news(ctx):
     pars_info = pars()
-    for news, links, imgs, date in pars_info.items():
-        await ctx.send(news, links, imgs, date)
+    news = list(pars_info['news'])
+    links = list(pars_info['links'])
+    imgs = list(pars_info['imgs'])
+    date = list(pars_info['date'])
+    for i in range(10):
+        await ctx.send(news[i])
+        await ctx.send(links[i])
+        await ctx.send(imgs[i])
+        await ctx.send(date[i])
 
 
 
